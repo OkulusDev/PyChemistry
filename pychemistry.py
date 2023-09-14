@@ -12,9 +12,25 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>."""
-#from pychemistry.PeriodicTable import parse_elements_from_text
-from pychemistry.PeriodicTable import ELEMENTS
+from pychemistry.PeriodicTable import spell, PeriodicTable
 
 
-for element in ELEMENTS:
-	print(element)
+def parse_elements_from_word(word):
+	spellings = '{}'.format(spell(word))
+	print(spellings)
+
+
+def main():
+	chemistry_formule = input(' > ')
+
+	chemistry_not_digits = ''
+
+	parse_elements_from_word(chemistry_formule)
+	pertable = PeriodicTable()
+
+	a = pertable.calculate_relative_molecular_mass(chemistry_formule)
+	print(a)
+
+
+if __name__ == '__main__':
+	main()
