@@ -21,6 +21,7 @@ def parse_elements_from_word(word):
 
 
 def main():
+	print('Введите химическую формулу: ')
 	chemistry_formule = input(' > ')
 
 	chemistry_not_digits = ''
